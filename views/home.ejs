@@ -1,0 +1,12 @@
+<%-include("header")%>
+<h1>hello</h1>
+<p><%= paragraph%></p>
+<% for(var i = 0; i <postObject.length; i++) { %>
+        <div>
+            <h1><%= postObject[i].input%></h1>
+            <p><%= postObject[i].text.substring(0, 100) + "....."%>
+                <a href="/postObject/<%= postObject[i].input%>">Read more</a>
+            </p>
+        </div>
+        <% } %>
+<%-include("footer")%>
